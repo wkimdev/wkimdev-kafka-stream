@@ -1,0 +1,14 @@
+spring:
+  profiles: local
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        simple-in:
+          destination: simples
+          contentType: application/json
+        simple-out:
+          destination: simples
+          contentType: application/json
