@@ -8,6 +8,7 @@ import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.MimeTypeUtils;
 
+import com.wkimdev.stream.SimpleStreams;
 import com.wkimdev.stream.model.Simples;
 
 import lombok.extern.slf4j.Slf4j;
@@ -17,11 +18,11 @@ import lombok.extern.slf4j.Slf4j;
 public class SimpleService {
 	
 	@Autowired
-	private SimpleStreams SimpleStreams;
+	private SimpleStreams SimpleSteams;
 	
 	public void sendSimpleMessage(String message) {
 		
-		MessageChannel messageChannel = SimpleStreams.outboundSimple();
+		MessageChannel messageChannel = SimpleSteams.outboundSimple();
 		
 		Simples simples = Simples.builder().simpleMessage(message).build();
 		

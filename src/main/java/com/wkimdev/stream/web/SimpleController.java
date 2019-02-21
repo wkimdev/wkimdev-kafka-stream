@@ -18,7 +18,7 @@ public class SimpleController {
 	@Autowired
 	public SimpleService simpleService;
 	
-	@GetMapping("/simples/{message}")
+	@GetMapping("wkimdevs/simples/{message}")
 	@ResponseStatus(HttpStatus.ACCEPTED)
 	public void Simples(@PathVariable("message") String message) {
 		log.info("incoming message {}", message);

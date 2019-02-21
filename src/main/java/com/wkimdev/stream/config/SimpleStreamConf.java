@@ -2,6 +2,7 @@ package com.wkimdev.stream.config;
 
 import org.springframework.cloud.stream.annotation.EnableBinding;
 
+
 import com.wkimdev.stream.SimpleStreams;
 
 /*
